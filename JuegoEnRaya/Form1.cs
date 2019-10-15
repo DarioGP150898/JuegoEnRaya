@@ -44,5 +44,30 @@ namespace JuegoEnRaya
             contador_de_turnos++;
             verGanador();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verGanador()
+        {
+            bool eres_el_ganador = false;
+
+
+
+            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled))
+                eres_el_ganador = true;
+            else if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled))
+                eres_el_ganador = true;
+            else if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled))
+                eres_el_ganador = true;
+
+
+            else if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled))
+                eres_el_ganador = true;
+
+        }
     }
+
 }
